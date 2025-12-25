@@ -33,10 +33,10 @@ jobs:
       -
         name: Argo cd app sync
         shell: bash
-        run: | 
-        argocd login argocd-server.argo-cd \
+        run: |
+          argocd login argocd-server.argo-cd \
           --insecure \
           --grpc-web \
           --username ${{ secrets.ARGOCD_LOGIN }} \
           --password ${{ secrets.ARGOCD_PASSWORD }}
-        argocd app sync python-app
+          argocd app sync python-app
